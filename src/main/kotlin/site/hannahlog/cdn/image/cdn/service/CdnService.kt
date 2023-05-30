@@ -26,7 +26,7 @@ class CdnService {
             val fileName = "${Date().time}_${request.file.originalFilename}"
             val path: Path = Paths.get(defaultPath.plus(requestPath), fileName)
             Files.write(path, request.file.bytes, StandardOpenOption.CREATE)
-            "$serverDomain/${request.path}/$fileName"
+            "$serverDomain/$requestPath/$fileName"
         } catch (e: Exception) {
             println(e)
             null
