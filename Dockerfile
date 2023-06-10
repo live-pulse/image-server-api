@@ -20,3 +20,5 @@ EXPOSE 8080
 
 #ENTRYPOINT ["java", "-Dspring.profiles.active=${USE_PROFILE}", "-jar", "/target/backend-api.jar"]
 ENTRYPOINT ["java", "-jar", "/target/image-server-api.jar"]
+
+# docker build --platform=linux/amd64 -t coals0329/image-server-api .
